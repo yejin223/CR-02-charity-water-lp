@@ -196,3 +196,60 @@ section {
     width: 300px;
   }
 }
+
+/* ==== Brand tokens (charity: water) ==== */
+:root{
+  --bg:#fff9e6;       /* 밝은 배경 */
+  --card:#fffef7;
+  --ink:#222222;
+  --ink-dim:#555555;
+  --accent:#FFC907;   /* 브랜드 옐로우 */
+  --accent-ink:#111111;
+  --muted:#e8e2c8;
+  --shadow:0 8px 18px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Avenir Next",Avenir,"Proxima Nova","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  line-height:1.6}
+
+/* Typography helpers */
+h1,h2,h3{line-height:1.2;margin:0 0 .5rem}
+h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.4rem,3.2vw,2.2rem)}
+.lead{color:var(--ink-dim);font-size:1.125rem}
+.accent{background:linear-gradient(90deg,var(--accent),#ffd84d);
+  color:var(--accent-ink);padding:0 .35rem;border-radius:.4rem}
+
+/* Buttons */
+.btn{display:inline-block;font-weight:700;padding:.85rem 1.1rem;border-radius:999px;
+  border:2px solid transparent;text-decoration:none;transition:transform .15s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn--lg{padding:1rem 1.25rem}
+.btn--primary{background:var(--accent);color:var(--accent-ink);border-color:#e0b300;
+  box-shadow:0 6px 0 rgba(0,0,0,.12)}
+
+/* Layout */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;
+  padding:clamp(1rem,4vw,3rem)}
+.hero__actions{margin:1rem 0}
+.hero__media img{width:100%;height:420px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow)}
+
+.story,.impact-story,.call-to-action{padding:1.5rem 1.2rem;background:var(--card);
+  border:1px solid var(--muted);border-radius:18px;margin:1rem;box-shadow:var(--shadow)}
+.impact-content{display:grid;grid-template-columns:220px 1fr;gap:1rem;align-items:start}
+.impact-image{border-radius:16px}
+
+.call-to-action{text-align:center}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr}
+  .impact-content{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .btn--lg{padding:.9rem 1.1rem}
+}
