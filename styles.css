@@ -48,10 +48,10 @@ h2{font-size:clamp(1.4rem,3.2vw,2.2rem)}
 .hero-image {
   display: block;
   margin: 2rem auto;
-  width: 280px;               /* 크기 조절 */
-  height: 380px;              /* 세로 늘려주기 */
+  width: 280px;               
+  height: 380px;           
   object-fit: cover;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* 물방울 느낌 */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
   box-shadow: var(--shadow);
 }
 
