@@ -25,32 +25,58 @@ h2{font-size:clamp(1.4rem,3.2vw,2.2rem)}
   border:2px solid transparent; text-decoration:none; transition:transform .15s ease, box-shadow .2s ease}
 .btn:hover{transform:translateY(-2px)}
 .btn--lg{padding:1rem 1.25rem}
-.btn--primary{background:var(--accent); color:var(--accent-ink); border-color:#e0b300; box-shadow:0 6px 0 rgba(0,0,0,.12)}
+.btn--primary{
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 1.1rem 2.2rem;
+  font-size: 1.15rem;
+  border-radius:999px;
+  border: 2px solid #e0b300;
+  box-shadow: 0 8px 0 rgba(0,0,0,.18);
+}
 
-/* Brandbar */
-.brandbar{background:#fff; border-bottom:1px solid #eee3be; text-align:center; padding:.7rem 0}
-.brandbar img{height:28px}
+
+.brandbar{
+  background:#fff;
+  border-bottom:1px solid #eee3be;
+  text-align:center;
+  padding:1rem 0;          
+}
+.brandbar img{
+  height:72px;            
+  display:inline-block;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.08));
+}
 
 /* Hero */
 .hero{position:relative; text-align:center; padding:3rem 1rem}
 .brand-rail{
-  position:absolute; left:16px; top:40px;
-  display:flex; flex-direction:column; align-items:center; gap:.6rem;
+  position:absolute;
+  left: -8px;              
+  top: 48px;
+  display:flex; flex-direction:column; align-items:center; gap:.75rem;
 }
 .rail-text{
   writing-mode:vertical-rl; transform:rotate(180deg);
-  font-size:18px; font-weight:600; letter-spacing:.12em; color:#333; opacity:.9;
+  font-size:22px;         
+  font-weight:700;
+  letter-spacing:.15em;
+  color:#333; opacity:.9;
 }
-.rail-icon{width:28px; height:28px; margin-top:.5rem}
+.rail-icon{
+  width:40px; height:40px; 
+  border-radius:6px;
+  box-shadow:0 2px 4px rgba(0,0,0,.12);
+}
+
 
 /* Hero image (single rule only) */
 .hero-image{
-  display:block; margin:1.6rem auto 0;
-  width:380px; height:500px;            
-  object-fit:cover;
-  border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;
-  box-shadow:var(--shadow);
+  width: 440px;     /* 380 → 440 */
+  height: 590px;    /* 500 → 590 */
+  border-radius: 50% 50% 50% 50% / 72% 72% 40% 40%; 
 }
+
 
 /* Sections */
 .story,.impact-story,.call-to-action{
